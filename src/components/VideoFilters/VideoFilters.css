@@ -5,9 +5,10 @@
 
 .videoFilters_category{
     font-size: 1rem;
-    padding: 0.5rem;
+    padding: 0.75rem;
     border: none;
     border-radius: 1rem;
+    background-color: gainsboro;
 }
 
 .videoFilters_category:hover, .videoFilters_category.active{
