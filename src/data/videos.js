@@ -92,4 +92,50 @@ export const videos = [
           },
         ],
       },
+    {
+        _id: "-mt8aNy1M00",
+        title: "Finding the Lost Largest Pyramid in the World",
+        description:
+          "Here is our second documentary. It’s a story about Ammar’s dream to climb the Pyramid of Giza and where that actually led him to...a dream he never knew he had, deep in the jungles of Guatemala. Thank you for those of you who supported the paywall for the past month, you made this doc and future ones possible for us. Thank you to all of you for supporting our dreams. Hope you enjoy the film now here on YouTube!",
+        creator: "Yes Theory",
+        category: "Adventure",
+        uploaded: "Oct 15 2019",
+        comments: [
+          {
+            user: "Stonks",
+            comment:
+              "Let's go 💪🏻",
+            color: "red",
+          },
+          {
+            user: "John Wick",
+            comment:
+              "Loved this video. A brilliantly visual and fun-to-watch video!",
+            color: "brown",
+          },
+        ],
+      },
+    {
+        _id: "BTOHpoC-XsE",
+        title: "I wish I knew this in my 20s",
+        description:
+          "This is how compound interest should be taught in school. Instead of memorizing a formula, teach children about the practical applications.",
+        creator: "Honestly by Tanmay Bhat",
+        category: "Investing",
+        uploaded: "Mar 26 2021",
+        comments: [
+          {
+            user: "Stonks",
+            comment:
+              "Let's go 💪🏻",
+            color: "red",
+          },
+          {
+            user: "John Wick",
+            comment:
+              "Loved this video. A brilliantly visual and fun-to-watch video!",
+            color: "brown",
+          },
+        ],
+      },
 ]

@@ -1,18 +1,32 @@
 .navBar{
     height: var(--navbar-height);
     /* width: 100vw; */
-    background-color: aquamarine;
+    /* background-color: gray; */
+    border-bottom: 1px solid gainsboro;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 1rem;
+}
+
+.navBar_logo{
+    height: var(--navbar-height);
+    width: 150px;
+}
+
+.navBar_logo > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .navBar_searchInputDiv{
     background-color: white;
+    border: 1px solid gray;
     display: flex;
     align-items: center;
     font-size: 1.5rem;
-    padding: 0.4rem 0;
+    padding: 0.5rem 0;
     border-radius: 0.5rem;
 }
 

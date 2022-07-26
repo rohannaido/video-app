@@ -7,7 +7,6 @@
 .app_content{
   /* background-color: blanchedalmond; */
   height: 100%;
-  outline: 1px solid blueviolet;
   width: 100%;
   display: flex;  
 }
@@ -18,5 +17,5 @@
 
 .app_content > div:nth-child(2){
   min-height: calc(100vh - var(--navbar-height));
-  min-width: calc(100vw - 250px);
+  max-width: calc(100vw - var(--sidebar-width));
 }

@@ -1,0 +1,16 @@
+.videoFilters{
+    display: flex;
+    gap: 1rem
+}
+
+.videoFilters_category{
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+.videoFilters_category:hover, .videoFilters_category.active{
+    background-color: brown;
+    color: white;
+}

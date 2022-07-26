@@ -1,10 +1,11 @@
 *{
-  outline: 1px solid greenyellow;
+  /* outline: 1px solid greenyellow; */
   box-sizing: border-box;
 }
 
 :root{
   --navbar-height : 60px;
+  --sidebar-width : 250px;
 }
 
 body {

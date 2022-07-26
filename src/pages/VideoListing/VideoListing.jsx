@@ -1,21 +1,23 @@
 import './VideoListing.css'
 import { videos } from '../../data/videos';
 import VideoCard from '../../components/VideoCard/VideoCard';
+import VideoFilters from '../../components/VideoFilters/VideoFilters';
+import { useState } from 'react';
 
 const getVideoCategories = (videosArr) => {
-    return [...new Set(videosArr.map((item) => item.category))];
+    return ['All', ...new Set(videosArr.map((item) => item.category))];
 }
 
 const VideoListing = () => {
 
     const categories = getVideoCategories(videos);
 
-    console.log(categories);
+    const [category, setCategory] = useState("All")
 
     return (
         <div className="videoListing">
             <div className='videoListing_filters'>
-                {categories.map((item) => item)}
+                <VideoFilters categories={categories} category={category} setCategory={setCategory} />
             </div>
 
             <div className="videoListing_panel">
