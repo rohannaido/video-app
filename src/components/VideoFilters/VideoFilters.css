@@ -9,6 +9,7 @@
     border: none;
     border-radius: 1rem;
     background-color: gainsboro;
+    cursor: pointer;
 }
 
 .videoFilters_category:hover, .videoFilters_category.active{

@@ -9,7 +9,7 @@ const SideBar = () => {
     <div className="sideBar">
         <ul>
             <Link to='/'>
-                <li>
+                <li className='active'>
                         <AiFillHome />Home
                 </li>
             </Link>
@@ -21,9 +21,11 @@ const SideBar = () => {
             <li>
                 <AiFillHeart />Liked
             </li>
-            <li>
-                <AiFillClockCircle />Watch Later
-            </li>
+            <Link to='/watchlater'>
+                <li>
+                    <AiFillClockCircle />Watch Later
+                </li>
+            </Link>
             <Link to='/history'>
                 <li>
                     <BiHistory />History

@@ -38,3 +38,7 @@
 .sideBar ul li:hover{
     background-color: #d1d5db;
 }
+
+.sideBar ul li.active{
+    background-color: #d1d5db;
+}

@@ -1,0 +1,39 @@
+.videoViewer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin: 2rem 2rem 0 2rem;
+}
+
+.videoViewer_playerFrame{
+    height: 75vh;
+    width: 100%;
+}
+
+.videoViewer_videoTitle{
+    /* text-align: start; */
+}
+
+.videoViewer_content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.videoViewer_creator{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.videoViewer_uploadDate{
+    font-size: 0.8rem;
+}
+
+.videoViewer_fullBreak{
+    background-color: black;
+    height: 1px;
+    width: 100%;
+    margin: 1rem 0;
+}
