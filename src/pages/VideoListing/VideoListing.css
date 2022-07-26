@@ -1,0 +1,12 @@
+.videoListing{
+    display: flex;
+    flex-direction: column;
+}
+
+.videoListing_panel{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem
+}

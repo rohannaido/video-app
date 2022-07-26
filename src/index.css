@@ -1,3 +1,12 @@
+*{
+  outline: 1px solid greenyellow;
+  box-sizing: border-box;
+}
+
+:root{
+  --navbar-height : 60px;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

@@ -1,0 +1,24 @@
+.navBar{
+    height: var(--navbar-height);
+    /* width: 100vw; */
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navBar_searchInputDiv{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 0.4rem 0;
+    border-radius: 0.5rem;
+}
+
+.navBar_searchInput{
+    font-size: 1rem;
+    border: none;
+    height: 1.5rem;
+    width: 300px;
+}
