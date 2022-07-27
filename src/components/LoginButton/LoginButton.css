@@ -1,11 +1,26 @@
+.loginButton_div{
+    display: flex;
+    align-items: center;
+}
+
 .loginButton{
     background-color: transparent;
     padding: 1rem;
     border: none;
     font-size: 1rem;
     cursor: pointer;
+    font-family: inherit;
 }
 
 .loginButton:hover{
     color: gray;
+}
+
+.loginButton_signOutBtn{
+    background-color: transparent;
+    padding: 1rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: inherit;
 }

@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { loginApp } from '../../firebase/service';
-import './Login.css'
+import './Login.css';
+import { useNavigate } from 'react-router-dom'
+import { useDispatch } from "react-redux";
 
 const Login = () => {
 
@@ -8,6 +10,9 @@ const Login = () => {
         email: "",
         password: "",
     });
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     return (
         <div className='loginPage'>
@@ -25,7 +30,13 @@ const Login = () => {
                 </label>
                 <button className='loginPage_signInBtn' onClick={(e) => {
                     e.preventDefault();
-                    loginApp(loginForm.email, loginForm.password);
+                    try{
+                        loginApp(dispatch, loginForm.email, loginForm.password)
+                        .then(() => navigate('/'));
+                    }
+                    catch(error){
+                        console.log(error);
+                    }
                 }}>
                     Sign In
                 </button>

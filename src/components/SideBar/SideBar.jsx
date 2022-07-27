@@ -4,7 +4,7 @@ import { BiHistory } from 'react-icons/bi'
 import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom';
 
-const SideBar = ({drawer}) => {
+const SideBar = ({drawer, setDrawer}) => {
 
     const location = useLocation();
     const currPage = location.pathname.split('/')[1];
@@ -12,7 +12,7 @@ const SideBar = ({drawer}) => {
 
     return (
     <div className={`sideBar ${drawer && 'show-sidebar'}`}>
-        <ul>
+        <ul onClick={() => setDrawer(false)}>
             <Link to='/'>
                 <li className={`${(currPage === '') && 'active'}`}>
                         <AiFillHome />Home

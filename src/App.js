@@ -17,8 +17,6 @@ import firebaseConfig from './firebaseConfig';
 function App() {
 
   
-  const app = initializeApp(firebaseConfig);
-  console.log(app)
   // const [sideBarTab, setSideBarTab] = useState('Home');
   const [drawer, setDrawer] = useState(false);
 
@@ -27,7 +25,7 @@ function App() {
       <HashRouter>
         <NavBar setDrawer={setDrawer} />
         <div className='app_content'>
-          <SideBar drawer={drawer} />
+          <SideBar drawer={drawer} setDrawer={setDrawer} />
           <Routes>
             <Route path='/' element={<VideoListing />} />
             <Route path='/video/:videoId' element={<VideoViewer />} />
