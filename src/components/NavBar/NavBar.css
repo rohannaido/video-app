@@ -1,12 +1,11 @@
 .navBar{
     height: var(--navbar-height);
-    /* width: 100vw; */
-    /* background-color: gray; */
     border-bottom: 1px solid gainsboro;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
+    background-color: white;
 }
 
 .navBar_logo{

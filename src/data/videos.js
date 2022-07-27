@@ -115,27 +115,4 @@ export const videos = [
           },
         ],
       },
-    {
-        _id: "BTOHpoC-XsE",
-        title: "I wish I knew this in my 20s",
-        description:
-          "This is how compound interest should be taught in school. Instead of memorizing a formula, teach children about the practical applications.",
-        creator: "Honestly by Tanmay Bhat",
-        category: "Investing",
-        uploaded: "Mar 26 2021",
-        comments: [
-          {
-            user: "Stonks",
-            comment:
-              "Let's go 💪🏻",
-            color: "red",
-          },
-          {
-            user: "John Wick",
-            comment:
-              "Loved this video. A brilliantly visual and fun-to-watch video!",
-            color: "brown",
-          },
-        ],
-      },
 ]

@@ -12,11 +12,34 @@
   display: flex;  
 }
 
-.app_content > div:first-child{
+.App > div:first-child{
+  /* position: sticky; */
+  /* top: 0; */
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
 
+.app_content > div:first-child{
+  top: var(--navbar-height);
+  position: fixed;
 }
 
 .app_content > div:nth-child(2){
-  min-height: calc(100vh - var(--navbar-height));
   max-width: calc(100vw - var(--sidebar-width));
+  margin-left: var(--sidebar-width);
+}
+
+@media screen and (max-width: 768px) {
+  .app_content > div:first-child{
+    /* top: var(--navbar-height); */
+    /* display: none; */
+  }
+
+  .app_content > div:nth-child(2){
+    /* min-height: calc(100vh - var(--navbar-height)); */
+    max-width: calc(100vw);
+    margin-left: 0;
+  }
+
 }
