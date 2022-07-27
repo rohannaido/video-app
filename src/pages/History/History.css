@@ -1,0 +1,31 @@
+.historyVideos{
+    width: 100%;
+}
+
+.historyVideos_header{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.historyVideos_header button{
+    padding: 0.5rem;
+    font-size: inherit;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.historyVideos_header button:hover{
+    color: gainsboro;
+}
+
+.historyVideos_list{
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}

@@ -2,15 +2,16 @@ import './VideoViewer.css'
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { videos } from '../../data/videos';
+import { updateHistory } from '../../firebase/service';
 
 const VideoViewer = () => {
 
     const location = useLocation();
     const videoId = location.pathname.split('/')[2];
     const { title, creator, uploaded, description, } = videos.filter((item) => (item._id === videoId))[0];
-    console.log(videos.filter((item) => (item._id === videoId))[0]);
 
     useEffect(() => {
+        updateHistory(videoId);
     },[]);
 
     return(

@@ -1,5 +1,5 @@
 .navBar{
-    height: var(--navbar-height);
+    min-height: var(--navbar-height);
     border-bottom: 1px solid gainsboro;
     display: flex;
     justify-content: space-between;
@@ -21,7 +21,7 @@
 }
 
 .navBar_logo{
-    height: var(--navbar-height);
+    height: calc(var(--navbar-height) - 10px);
     width: 150px;
 }
 
@@ -37,7 +37,7 @@
     display: flex;
     align-items: center;
     font-size: 1.5rem;
-    padding: 0.5rem 0.25rem;
+    padding: 0.25rem 0.25rem;
     border-radius: 0.5rem;
 }
 
@@ -55,7 +55,8 @@
     }
 
     .navBar_logo{
-        width: 150px;
+        height: 40px;
+        width: 100px;
     }
 
     .navBar_searchInput{

@@ -9,14 +9,14 @@ const Liked = () => {
     const [likedArr, setLikedArr] = useState([]);
 
     useEffect(() => {
-        const loadWatchLater = async () => { 
+        const loadLikedVideos = async () => { 
             const data = await getUserData("9G5bcB6PGwTTTJruk18gIlGhLb42");
             console.log(data.likedArr)
             
             setLikedArr(getVideoDataFromIdArr(data.liked));
 
         }
-        loadWatchLater();
+        loadLikedVideos();
     },[])
 
     return (
