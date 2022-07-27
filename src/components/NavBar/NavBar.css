@@ -8,6 +8,12 @@
     background-color: white;
 }
 
+.navBar_logoMenuDiv{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .navBar_menuIcon{
     display: none;
     font-size: 1.5rem;
@@ -31,7 +37,7 @@
     display: flex;
     align-items: center;
     font-size: 1.5rem;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0.25rem;
     border-radius: 0.5rem;
 }
 
@@ -40,11 +46,19 @@
     border: none;
     height: 1.5rem;
     width: 300px;
-    padding: 1rem 0;
+    padding: 0.5rem 0.5rem;
 }
 
 @media screen and (max-width: 768px) {
     .navBar_menuIcon{
         display: block;
+    }
+
+    .navBar_logo{
+        width: 150px;
+    }
+
+    .navBar_searchInput{
+        width: 150px;
     }
 }

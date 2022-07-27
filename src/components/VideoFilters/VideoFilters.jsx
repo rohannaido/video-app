@@ -4,7 +4,7 @@ const VideoFilters = ({categories, category, setCategory}) => {
     return (
         <div className="videoFilters">
             {categories.map((item) => { return (
-                <button className={'videoFilters_category ' + ((category === item) ?'active' : '') } onClick={() => setCategory(item)}>
+                <button key={item} className={'videoFilters_category ' + ((category === item) ?'active' : '') } onClick={() => setCategory(item)}>
                     {item}
                 </button>
             ) })}

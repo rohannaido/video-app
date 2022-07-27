@@ -11,7 +11,13 @@
 .videoListing_panel{
     padding: 1rem 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 1rem
+    gap: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .videoListing_panel{
+        justify-content: center;
+    }
 }

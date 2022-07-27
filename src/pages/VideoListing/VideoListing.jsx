@@ -3,6 +3,7 @@ import { videos } from '../../data/videos';
 import VideoCard from '../../components/VideoCard/VideoCard';
 import VideoFilters from '../../components/VideoFilters/VideoFilters';
 import { useEffect, useState } from 'react';
+import { getApp } from 'firebase/app';
 
 const getVideoCategories = (videosArr) => {
     return ['All', ...new Set(videosArr.map((item) => item.category))];
@@ -11,7 +12,7 @@ const getVideoCategories = (videosArr) => {
 const VideoListing = () => {
 
     const categories = getVideoCategories(videos);
-    
+    console.log(getApp());
     const [category, setCategory] = useState("All")
     const [filterVideos, setFilterVideos] = useState(videos);
 
@@ -29,7 +30,7 @@ const VideoListing = () => {
             </div>
 
             <div className="videoListing_panel">
-                {filterVideos.map((item) => <VideoCard videoItem={item} />)}
+                {filterVideos.map((item) => <VideoCard videoItem={item} key={item._id} />)}
             </div>
         </div>
     )

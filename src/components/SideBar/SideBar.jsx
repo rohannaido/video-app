@@ -2,32 +2,39 @@ import './SideBar.css'
 import { AiFillHome, AiFillPlayCircle, AiFillHeart, AiFillClockCircle } from 'react-icons/ai'
 import { BiHistory } from 'react-icons/bi'
 import { Link } from 'react-router-dom'
-
+import { useLocation } from 'react-router-dom';
 
 const SideBar = ({drawer}) => {
+
+    const location = useLocation();
+    const currPage = location.pathname.split('/')[1];
+    // console.log(currPage.pathname.split('/')[1]);
+
     return (
     <div className={`sideBar ${drawer && 'show-sidebar'}`}>
         <ul>
             <Link to='/'>
-                <li className='active'>
+                <li className={`${(currPage === '') && 'active'}`}>
                         <AiFillHome />Home
                 </li>
             </Link>
-            <Link to='/history'>
-                <li>
+            <Link to='/playlist'>
+                <li className={`${(currPage === 'playlist') && 'active'}`}>
                         <AiFillPlayCircle />Playlist
                 </li>
             </Link>
-            <li>
-                <AiFillHeart />Liked
-            </li>
+            <Link to='/liked'>
+                <li className={`${(currPage === 'liked') && 'active'}`}>
+                    <AiFillHeart />Liked
+                </li>
+            </Link>
             <Link to='/watchlater'>
-                <li>
+                <li className={`${(currPage === 'watchlater') && 'active'}`}>
                     <AiFillClockCircle />Watch Later
                 </li>
             </Link>
             <Link to='/history'>
-                <li>
+                <li className={`${(currPage === 'history') && 'active'}`}>
                     <BiHistory />History
                 </li>
             </Link>
