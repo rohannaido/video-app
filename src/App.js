@@ -11,13 +11,14 @@ import WatchLater from './pages/WatchLater/WatchLater';
 function App() {
 
   // const [sideBarTab, setSideBarTab] = useState('Home');
+  const [drawer, setDrawer] = useState(false);
 
   return (
     <div className='App'>
       <BrowserRouter>
-        <NavBar />
+        <NavBar setDrawer={setDrawer} />
         <div className='app_content'>
-          <SideBar />
+          <SideBar drawer={drawer} />
           <Routes>
             <Route path='/' element={<VideoListing />} />
             <Route path='/history' element={<History />} />

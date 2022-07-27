@@ -42,3 +42,13 @@
 .sideBar ul li.active{
     background-color: #d1d5db;
 }
+
+@media screen and (max-width: 768px) {
+    .sideBar{
+        transform: translateX(-100%);
+        transition: transform 0.2s;
+    }
+    .show-sidebar{
+        transform: translateX(0%);
+    }
+}

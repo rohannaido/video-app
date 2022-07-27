@@ -1,11 +1,15 @@
 import './NavBar.css'
 import { AiOutlineSearch } from 'react-icons/ai';
+import { GiHamburgerMenu } from 'react-icons/gi'
 import logo from '../../assets/learnmedia.png'
 import { Link } from 'react-router-dom';
 
-const NavBar = () => {
+const NavBar = ({setDrawer}) => {
     return (
         <div className="navBar">
+            <div className='navBar_menuIcon' onClick={() => setDrawer(prev => !prev)}>
+                <GiHamburgerMenu />
+            </div>
             <Link to='/'>
                 <div className='navBar_logo'>
                     <img src={logo} alt="logo" />

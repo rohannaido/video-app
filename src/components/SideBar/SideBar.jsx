@@ -4,9 +4,9 @@ import { BiHistory } from 'react-icons/bi'
 import { Link } from 'react-router-dom'
 
 
-const SideBar = () => {
+const SideBar = ({drawer}) => {
     return (
-    <div className="sideBar">
+    <div className={`sideBar ${drawer && 'show-sidebar'}`}>
         <ul>
             <Link to='/'>
                 <li className='active'>

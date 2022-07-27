@@ -115,4 +115,75 @@ export const videos = [
           },
         ],
       },
+
+      {
+        _id: "GaC9m93ACP8",
+        title: "THE MAN WHO MAKES MORE PEOPLE DREAM! | KUNAL SHAH on Money talks!",
+        description:
+          "From living in a 100 sqft apartment to building multiple companies, how did Kunal Shah become Kunal Shah? Why does he do what he does? What is he truly chasing if he is not chasing money? I sit down with Kunal Shah to talk about things you perhaps would not have heard before; and am sure you would find the conversation as enriching as I did, while speaking to him.",
+        creator: "warikoo",
+        category: "Business",
+        uploaded: "Jul 23 2022",
+        comments: [
+          {
+            user: "John Wick",
+            comment:
+              "Loved this video. A brilliantly visual and fun-to-watch video!",
+            color: "brown",
+          },
+        ],
+      },
+
+      {
+        _id: "cdZZpaB2kDM",
+        title: "Elon Musk talks Twitter, Tesla and how his brain works — live at TED2022",
+        description:
+          "In this unedited conversation with head of TED Chris Anderson, Elon Musk — the head of Tesla, SpaceX, Neuralink and The Boring Company — digs into the recent news around his bid to purchase Twitter and gets honest about the biggest regret of his career, how his brain works, the future he envisions for the world and a lot more.",
+        creator: "TED",
+        category: "Business",
+        uploaded: "Apr 14 2022",
+        comments: [
+          {
+            user: "John Wick",
+            comment:
+              "Loved this video. A brilliantly visual and fun-to-watch video!",
+            color: "brown",
+          },
+        ],
+      },
+
+      {
+        _id: "j9qGmO8Yy-Y",
+        title: "Sundar Pichai, CEO of Google and Alphabet",
+        description:
+          "\"You have to encourage innovation. Companies become more conservative  in decision making as you grow...be okay with failure and reward effort, not outcomes.\" In this View From The Top interview, CEO of Google and Alphabet, Sundar Pichai, speaks to Archana Sohmshetty, MBA '22, about the impact of access to technology, humanity's challenge to harness it, and how Google is sustainably defining the future of work.  \"When you see the appetite and the desire for people to make their lives better by gaining access to technology, that is what compels me to go beyond.\" says Pichai.",
+        creator: "Stanford Graduate School of Business",
+        category: "Business",
+        uploaded: "Apr 27 2022",
+        comments: [
+          {
+            user: "John Wick",
+            comment:
+              "Loved this video. A brilliantly visual and fun-to-watch video!",
+            color: "brown",
+          },
+        ],
+      },
+      {
+        _id: "ErPsyBUCijM",
+        title: "Legend of Atlantis (Full Episode) | Drain the Oceans",
+        description:
+          "Exciting evidence emerges of civilizations lost for centuries under the waves, from mysterious underwater pyramids off the coast of Japan to the fabled city of Atlantis itself. Using cutting-edge graphics to reveal what's actually lying on the seafloor, and insight from the world's top marine archaeologists, Drain the Oceans finds the answers.",
+        creator: "National Geographic",
+        category: "Adventure",
+        uploaded: "Dec 31 2020",
+        comments: [
+          {
+            user: "John Wick",
+            comment:
+              "Loved this video. A brilliantly visual and fun-to-watch video!",
+            color: "brown",
+          },
+        ],
+      },
 ]

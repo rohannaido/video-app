@@ -32,8 +32,7 @@
 
 @media screen and (max-width: 768px) {
   .app_content > div:first-child{
-    /* top: var(--navbar-height); */
-    /* display: none; */
+    /* transform: translateX(-100%); */
   }
 
   .app_content > div:nth-child(2){
