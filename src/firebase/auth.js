@@ -10,7 +10,10 @@ import {
   where 
 } from "firebase/firestore"; 
 import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
+import { initializeApp } from "firebase/app";
+import firebaseConfig from "../firebaseConfig.js";
 
+const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 
 async function loginApp(dispatch, email, password){
@@ -49,8 +52,10 @@ function getCurrUserId(){
   //     console.log("else");
   //   }
   // });
-  const userUid = auth.currentUser.uid;
-  return userUid;
+  if(auth.currentUser){
+    const userUid = auth.currentUser.uid;
+    return userUid;
+  }
 }
 
 export { loginApp, signOutApp, getCurrUserId };

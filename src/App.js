@@ -9,16 +9,33 @@ import WatchLater from './pages/WatchLater/WatchLater';
 import History from './pages/History/History';
 import VideoViewer from './pages/VideoViewer/VideoViewer';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Login from './pages/Login/Login';
 import { initializeApp } from "firebase/app";
 import firebaseConfig from './firebaseConfig';
+import { getCurrUserId } from './firebase/auth'
+import { Navigate } from 'react-router-dom'
 
 function App() {
 
+  initializeApp(firebaseConfig);
   
-  // const [sideBarTab, setSideBarTab] = useState('Home');
   const [drawer, setDrawer] = useState(false);
+  const [currUser, setCurrUser] = useState('');
+
+  useEffect(() => {
+    const user = getCurrUserId();
+    if (user) {
+      setCurrUser(user)
+    }
+  },[])
+   
+  const privatePath = (page) => {
+    if(currUser != ''){
+      return page;
+    }
+    return <Navigate to="/login" replace />;
+  }
 
   return (
     <div className='App'>
@@ -29,10 +46,12 @@ function App() {
           <Routes>
             <Route path='/' element={<VideoListing />} />
             <Route path='/video/:videoId' element={<VideoViewer />} />
-            <Route path='/playlist' element={<Playlist />} />
-            <Route path='/liked' element={<Liked />} />
-            <Route path='/watchlater' element={<WatchLater />} />
-            <Route path='/history' element={<History />} />
+
+            <Route path='/playlist' element={privatePath(<Playlist />)} />
+            <Route path='/liked' element={privatePath(<Liked />)} />
+            <Route path='/watchlater' element={privatePath(<WatchLater />)} />
+            <Route path='/history' element={privatePath(<History />)} />
+
             <Route path='/login' element={<Login />} />
           </Routes>
         </div>
