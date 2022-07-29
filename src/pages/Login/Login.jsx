@@ -28,17 +28,37 @@ const Login = () => {
                     <input type='password' name='password' value={loginForm.password} onChange={(e) => setLoginForm(prev => ({...prev, 
                         password: e.target.value}) )}/>
                 </label>
-                <button className='loginPage_signInBtn' onClick={(e) => {
-                    e.preventDefault();
-                    try{
-                        loginApp(dispatch, loginForm.email, loginForm.password)
-                        .then(() => navigate('/'));
-                    }
-                    catch(error){
-                        console.log(error);
-                    }
-                }}>
-                    Sign In
+                
+                <div className='loginPage_buttonsDiv'>
+                    <button className='loginPage_signInBtn' onClick={(e) => {
+                        e.preventDefault();
+                        try{
+                            loginApp(dispatch, loginForm.email, loginForm.password)
+                            .then(() => navigate('/'));
+                        }
+                        catch(error){
+                            console.log(error);
+                        }
+                    }}>
+                        Sign In
+                    </button>
+
+                    <button className='loginPage_signInBtn guest' onClick={(e) => {
+                        e.preventDefault();
+                        try{
+                            loginApp(dispatch, "testuserrohan@gmail.com", "jqntdmh")
+                            .then(() => navigate('/'));
+                        }
+                        catch(error){
+                            console.log(error);
+                        }
+                    }}>
+                        Sign In as Guest
+                    </button>
+                </div>
+
+                <button class="loginPage_signUpBtn" type="button" onClick={() => navigate('/signup')}>
+                    Create New Account &gt;
                 </button>
             </form>
         </div>

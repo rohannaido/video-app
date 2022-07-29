@@ -1,4 +1,4 @@
-.loginPage{
+.signUpPage{
     min-height: calc(100vh - var(--navbar-height));
     width: 100%;
     display: flex;
@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-.loginPage_form{
+.signUpPage_form{
     display: flex;
     flex-direction: column;
     box-shadow: 0px 0px 5px 0px gray;
@@ -15,14 +15,13 @@
     gap: 1rem;
 }
 
-.loginPage_form label {
+.signUpPage_form label {
     display: flex;
     flex-direction: column;
 }
 
-.loginPage_form input {
+.signUpPage_form input {
     padding: 0.25rem;
-    width: 250px;
     font-size: inherit;
     font-family: inherit;
     padding: 0.25rem 0.25rem;
@@ -30,13 +29,17 @@
     border: 1px solid gray;
 }
 
-.loginPage_buttonsDiv{
+.signUpPage_nameInputDiv{
     display: flex;
-    flex-direction: column;
+    gap: 1rem;
 }
 
-.loginPage_signInBtn{
-    margin-top: 0.5rem;
+.signUpPage_nameInputDiv input{
+    width: 150px;
+}
+
+.signUpPage_signInBtn{
+    margin-top: 1rem;
     padding: 0.5rem 0.25rem;
     font-size: inherit;
     border: none;
@@ -47,11 +50,11 @@
     font-weight: bold;
 }
 
-.loginPage_signInBtn:hover{
+.signUpPage_signInBtn:hover{
     outline: 1px solid gray;
 }
 
-.loginPage_signUpBtn{
+.signUpPage_signUpBtn{
     border: none;
     background-color: transparent;
     font-size: inherit;
@@ -61,10 +64,20 @@
     cursor: pointer;
 }
 
-.loginPage_signUpBtn:hover{
+.signUpPage_signUpBtn:hover{
     outline: 1px solid gray;
 }
 
-.loginPage_signInBtn.guest{
-    background-color: gray;
+.signUpPage_LoginBtn{
+    border: none;
+    background-color: transparent;
+    font-size: inherit;
+    font-family: inherit;
+    padding: 0.5rem 0.25rem;
+    border-radius: 0.5rem;
+    cursor: pointer;   
+}
+
+.signUpPage_LoginBtn:hover{
+    outline: 1px solid gray;
 }

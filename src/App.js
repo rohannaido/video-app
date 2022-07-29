@@ -15,6 +15,8 @@ import { initializeApp } from "firebase/app";
 import firebaseConfig from './firebaseConfig';
 import { getCurrUserId } from './firebase/auth'
 import { Navigate } from 'react-router-dom'
+import SignUp from './pages/Login/SignUp';
+import { useSelector } from 'react-redux';
 
 function App() {
 
@@ -22,16 +24,18 @@ function App() {
   
   const [drawer, setDrawer] = useState(false);
   const [currUser, setCurrUser] = useState('');
+  const displayName = useSelector(state => state.user.value.displayName)
 
   useEffect(() => {
     const user = getCurrUserId();
+    console.log(user);
     if (user) {
       setCurrUser(user)
     }
-  },[])
+  },[displayName])
    
   const privatePath = (page) => {
-    if(currUser != ''){
+    if(displayName != ''){
       return page;
     }
     return <Navigate to="/login" replace />;
@@ -53,6 +57,7 @@ function App() {
             <Route path='/history' element={privatePath(<History />)} />
 
             <Route path='/login' element={<Login />} />
+            <Route path='/signup' element={<SignUp />} />
           </Routes>
         </div>
       </HashRouter>

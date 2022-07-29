@@ -1,10 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {};
-
 export const userSlice = createSlice({
   name: "user",
-  initialState,
+  initialState:{
+    value: {
+      uid: "",
+      accessToken: "",
+      displayName: "",
+    },
+  },
   reducers: {
     userLogIn: (state, action) => {
         console.log("LOGIN ", action.payload);
@@ -12,7 +16,11 @@ export const userSlice = createSlice({
     },
     userLogOut: (state) => {
         console.log("LOG OUT REDUCER ");
-        state.value = {};
+        state.value = {
+          uid: "",
+          accessToken: "",
+          displayName: "",
+        }
     }
   },
 });
