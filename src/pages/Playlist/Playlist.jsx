@@ -1,7 +1,9 @@
+import './Playlist.css'
+
 const Playlist = () => {
     return (
-        <div>
-            Playlist
+        <div className="playlistVideos">
+            <span className="playlistVideos_soonText">Coming Soon...</span>
         </div>
     )
 }

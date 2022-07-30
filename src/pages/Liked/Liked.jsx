@@ -21,7 +21,12 @@ const Liked = () => {
 
     return (
         <div className='likedVideos'>
-            {likedArr && likedArr.map(item => <VideoCard videoItem={item} key={item._id} />)}
+            <div className='likedVideos_header'>
+                <h2>Liked Videos</h2>
+            </div>
+            <div className='likedVideos_list'>
+                {likedArr && likedArr.map(item => <VideoCard videoItem={item} key={item._id} />)}
+            </div>
         </div>
     )
 }

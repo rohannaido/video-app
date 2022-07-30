@@ -21,7 +21,12 @@ const WatchLater = () => {
 
     return (
         <div className='watchLater'>
-            {watchLaterArr && watchLaterArr.map(item => <VideoCard videoItem={item} key={item._id} />)}
+            <div className='watchLater_header'>
+                <h2>Watch Later</h2>
+            </div>
+            <div className='watchLater_list'>
+                {watchLaterArr && watchLaterArr.map(item => <VideoCard videoItem={item} key={item._id} />)}
+            </div>
         </div>
     )
 }
