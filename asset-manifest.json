@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/video-app/static/css/main.1f0b5efd.css",
+    "main.js": "/video-app/static/js/main.5f5b2eab.js",
+    "static/media/learnmedia.png": "/video-app/static/media/learnmedia.4fd1f628b854cd80533f.png",
+    "index.html": "/video-app/index.html",
+    "main.1f0b5efd.css.map": "/video-app/static/css/main.1f0b5efd.css.map",
+    "main.5f5b2eab.js.map": "/video-app/static/js/main.5f5b2eab.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1f0b5efd.css",
+    "static/js/main.5f5b2eab.js"
+  ]
+}
