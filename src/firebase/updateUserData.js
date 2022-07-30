@@ -2,6 +2,7 @@ import {
     getFirestore, 
     doc, 
     getDoc, 
+    addDoc,
     updateDoc, 
     arrayUnion, 
     deleteField } from "firebase/firestore";
@@ -22,6 +23,7 @@ async function updateHistory(videoId) {
         return true;
     }
     catch(error){
+        
         throw error;
     }
 }

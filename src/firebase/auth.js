@@ -6,6 +6,8 @@ import {
   doc, 
   getDoc,
   getDocs, 
+  addDoc,
+  setDoc,
   query,
   where 
 } from "firebase/firestore"; 
@@ -15,6 +17,7 @@ import firebaseConfig from "../firebaseConfig.js";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
+const db = getFirestore();
 
 async function loginApp(dispatch, email, password){
     try{
@@ -74,6 +77,23 @@ async function createUser(dispatch, signUpData){
       const { accessToken, uid } = user;
       console.log('CREATED Account: ', { uid, displayName });
       dispatch(userLogIn({ accessToken, uid, displayName }));
+      
+      try{
+
+        await setDoc(doc(db, "userData", uid), {
+          history: [],
+          liked: [],
+          watchLater: [],
+        });
+        console.log('USER DOC CREATED ');
+        // console.log("User Document created with ID: ", docRef.id);
+
+      }
+      catch(error){
+        console.log("Creating user Doc ", error);
+        throw error;
+      }
+
     }
     catch(error){
       console.log("UPDATE displayName ", error);
