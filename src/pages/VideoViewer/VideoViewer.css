@@ -32,6 +32,27 @@
     font-size: 0.8rem;
 }
 
+.videoViewer_actionsDiv{
+    display: flex;
+    font-size: 1rem;
+}
+
+.videoViewer_actionsDiv button{
+    padding: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    background-color: gainsboro;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.videoViewer_actionsDiv button.active{
+    background-color: brown;
+    color: white;
+}
+
 .videoViewer_fullBreak{
     background-color: black;
     height: 1px;

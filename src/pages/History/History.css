@@ -29,3 +29,9 @@
     gap: 1rem;
     flex-wrap: wrap;
 }
+
+@media screen and (max-width: 768px) {
+    .historyVideos_list{
+        justify-content: center;
+    }
+}

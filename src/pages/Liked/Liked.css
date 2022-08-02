@@ -1,6 +1,16 @@
 .likedVideos{
     padding: 1rem;
+}
+
+.likedVideos_list{
+    padding: 1rem 0;
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+    .likedVideos_list{
+        justify-content: center;
+    }
 }
