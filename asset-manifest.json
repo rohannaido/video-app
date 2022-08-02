@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/video-app/static/css/main.8f094d97.css",
-    "main.js": "/video-app/static/js/main.68d78807.js",
+    "main.css": "/video-app/static/css/main.457ed637.css",
+    "main.js": "/video-app/static/js/main.4c56f18e.js",
     "static/media/learnmedia.png": "/video-app/static/media/learnmedia.4fd1f628b854cd80533f.png",
     "index.html": "/video-app/index.html",
-    "main.8f094d97.css.map": "/video-app/static/css/main.8f094d97.css.map",
-    "main.68d78807.js.map": "/video-app/static/js/main.68d78807.js.map"
+    "main.457ed637.css.map": "/video-app/static/css/main.457ed637.css.map",
+    "main.4c56f18e.js.map": "/video-app/static/js/main.4c56f18e.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f094d97.css",
-    "static/js/main.68d78807.js"
+    "static/css/main.457ed637.css",
+    "static/js/main.4c56f18e.js"
   ]
 }
