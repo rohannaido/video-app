@@ -35,6 +35,7 @@
 .videoViewer_actionsDiv{
     display: flex;
     font-size: 1rem;
+    gap: 1rem;
 }
 
 .videoViewer_actionsDiv button{

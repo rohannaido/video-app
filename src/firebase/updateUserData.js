@@ -61,4 +61,21 @@ async function updateLikedVideo(videoArr) {
 
 }
 
-export { updateHistory, clearHistory, updateLikedVideo };
+async function updateWatchLaterVideo(videoArr) {
+
+    const userUid = getCurrUserId();
+    const userRef = doc(db, "userData", userUid);
+
+    try{
+        await updateDoc(userRef, {
+            watchLater: videoArr
+        });
+        return true;
+    }
+    catch(error){
+        throw error;
+    }
+
+}
+
+export { updateHistory, clearHistory, updateLikedVideo, updateWatchLaterVideo };
